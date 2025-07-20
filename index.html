@@ -3,286 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indikator Capaian Tahunan | RENBIS 2025–2029</title>
-	<meta name="robots" content="noindex, nofollow">
+    <title>Dasbor Modern Indikator Capaian RENBIS 2025-2029</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
-            color: #1f2937;
         }
         .chart-container {
             position: relative;
-            height: 350px;
+            height: 350px; /* Adjusted height for better spacing */
             width: 100%;
         }
-        .card-style {
-            background: white;
-            border-radius: 1rem; /* 16px */
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease-in-out;
-        }
-        .card-style:hover {
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            transform: translateY(-2px);
-        }
-        .table-header th {
-            border-bottom: 2px solid #e5e7eb;
+        /* Custom gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="min-h-screen">
+<body class="bg-gradient-to-br from-gray-50 to-blue-100">
 
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
         <!-- Header -->
-        <header class="mb-10 text-center">
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">INDIKATOR CAPAIAN TAHUNAN</h1>
-            <p class="text-md sm:text-lg text-gray-600 mt-2">PERUMDA Air Minum Tirta Indragiri (2025-2029)</p>
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 gradient-text">Dasbor Capaian Strategis</h1>
+            <p class="text-lg text-gray-600 mt-3">PERUMDA Air Minum Tirta Indragiri | Rencana Bisnis 2025-2029</p>
         </header>
 
-        <!-- Main Content -->
         <main>
-            <!-- Comparative Table -->
-            <div class="card-style p-4 sm:p-6 mb-8">
-                <h3 class="text-xl font-bold mb-4 text-gray-900">Indikator Kinerja Utama</h3>
+            <!-- Kartu Metrik Utama -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Total Pelanggan -->
+                <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200 text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="mx-auto bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <p class="text-gray-500 text-sm">Target Total Pelanggan 2029</p>
+                    <p class="text-3xl font-bold text-gray-800">20.307</p>
+                </div>
+                <!-- Target NRW -->
+                <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200 text-center transform hover:scale-105 transition-transform duration-300">
+                     <div class="mx-auto bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                    </div>
+                    <p class="text-gray-500 text-sm">Target Penurunan NRW 2029</p>
+                    <p class="text-3xl font-bold text-green-600">20%</p>
+                </div>
+                <!-- Skor IKM -->
+                <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200 text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="mx-auto bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                       <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                    </div>
+                    <p class="text-gray-500 text-sm">Target Kepuasan (IKM) 2029</p>
+                    <p class="text-3xl font-bold text-gray-800">93</p>
+                </div>
+                 <!-- Efisiensi -->
+                <div class="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200 text-center transform hover:scale-105 transition-transform duration-300">
+                   <div class="mx-auto bg-pink-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 8l3 5m0 0l3-5m-3 5v4m-3-5h6m-6 3h6m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <p class="text-gray-500 text-sm">Target Efisiensi 2029</p>
+                    <p class="text-3xl font-bold text-green-600">&lt; 0.92</p>
+                </div>
+            </div>
+
+            <!-- Tabel Indikator Kinerja Utama -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-gray-700">Tabel Indikator Kinerja Utama (KPI)</h2>
+                    <p class="text-gray-500 mt-1">Proyeksi target tahunan berdasarkan dokumen RENBIS.</p>
+                </div>
                 <div class="overflow-x-auto">
-                    <table class="min-w-full">
-                        <thead class="table-header">
+                    <table class="w-full text-sm text-left text-gray-600">
+                        <thead class="text-xs text-white uppercase bg-gradient-to-r from-blue-600 to-blue-800">
                             <tr>
-                                <th scope="col" class="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Indikator</th>
-                                <th scope="col" class="px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider">2025</th>
-                                <th scope="col" class="px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider">2026</th>
-                                <th scope="col" class="px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider">2027</th>
-                                <th scope="col" class="px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider">2028</th>
-                                <th scope="col" class="px-6 py-4 text-center text-xs font-bold text-gray-500 uppercase tracking-wider">2029</th>
+                                <th scope="col" class="px-6 py-4 rounded-tl-2xl">Indikator Kinerja</th>
+                                <th scope="col" class="px-6 py-4 text-center">2025</th>
+                                <th scope="col" class="px-6 py-4 text-center">2026</th>
+                                <th scope="col" class="px-6 py-4 text-center">2027</th>
+                                <th scope="col" class="px-6 py-4 text-center">2028</th>
+                                <th scope="col" class="px-6 py-4 text-center rounded-tr-2xl">2029</th>
                             </tr>
                         </thead>
-                        <tbody id="kpi-table-body" class="bg-white divide-y divide-gray-200">
-                            <!-- Rows will be injected by JavaScript -->
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-blue-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Sambungan Baru (unit)</td>
+                                <td class="px-6 py-4 text-center font-medium">1.837</td>
+                                <td class="px-6 py-4 text-center font-medium">1.509</td>
+                                <td class="px-6 py-4 text-center font-medium">1.385</td>
+                                <td class="px-6 py-4 text-center font-medium">1.612</td>
+                                <td class="px-6 py-4 text-center font-medium">1.907</td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Total Proyeksi (kumulatif)</td>
+                                <td class="px-6 py-4 text-center font-medium">13.894</td>
+                                <td class="px-6 py-4 text-center font-medium">15.403</td>
+                                <td class="px-6 py-4 text-center font-medium">16.788</td>
+                                <td class="px-6 py-4 text-center font-medium">18.400</td>
+                                <td class="px-6 py-4 text-center font-medium">20.307</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Volume Produksi (m³/hari)</td>
+                                <td class="px-6 py-4 text-center font-medium">6.308</td>
+                                <td class="px-6 py-4 text-center font-medium">7.239</td>
+                                <td class="px-6 py-4 text-center font-medium">8.062</td>
+                                <td class="px-6 py-4 text-center font-medium">8.950</td>
+                                <td class="px-6 py-4 text-center font-medium">9.958</td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Cakupan Layanan (%)</td>
+                                <td class="px-6 py-4 text-center font-medium">8,0</td>
+                                <td class="px-6 py-4 text-center font-medium">8,5</td>
+                                <td class="px-6 py-4 text-center font-medium">9,0</td>
+                                <td class="px-6 py-4 text-center font-medium">9,8</td>
+                                <td class="px-6 py-4 text-center font-medium">10,5</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Tingkat Kehilangan Air (NRW) (%)</td>
+                                <td class="px-6 py-4 text-center font-semibold text-red-600">30,0</td>
+                                <td class="px-6 py-4 text-center font-semibold text-orange-500">27,5</td>
+                                <td class="px-6 py-4 text-center font-semibold text-yellow-500">25,0</td>
+                                <td class="px-6 py-4 text-center font-semibold text-green-500">22,5</td>
+                                <td class="px-6 py-4 text-center font-semibold text-green-600">20,0</td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Skor Kepuasan (IKM)</td>
+                                <td class="px-6 py-4 text-center font-medium">89</td>
+                                <td class="px-6 py-4 text-center font-medium">90</td>
+                                <td class="px-6 py-4 text-center font-medium">91</td>
+                                <td class="px-6 py-4 text-center font-medium">92</td>
+                                <td class="px-6 py-4 text-center font-medium">93</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Penyelesaian Aduan (%)</td>
+                                <td class="px-6 py-4 text-center font-medium text-green-600">100</td>
+                                <td class="px-6 py-4 text-center font-medium text-green-600">100</td>
+                                <td class="px-6 py-4 text-center font-medium text-green-600">100</td>
+                                <td class="px-6 py-4 text-center font-medium text-green-600">100</td>
+                                <td class="px-6 py-4 text-center font-medium text-green-600">100</td>
+                            </tr>
+                             <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">SDM Dilatih (kumulatif)</td>
+                                <td class="px-6 py-4 text-center font-medium">20</td>
+                                <td class="px-6 py-4 text-center font-medium">45</td>
+                                <td class="px-6 py-4 text-center font-medium">75</td>
+                                <td class="px-6 py-4 text-center font-medium">110</td>
+                                <td class="px-6 py-4 text-center font-medium">150</td>
+                            </tr>
+                            <tr class="hover:bg-blue-50 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-gray-800">Efisiensi Operasional (Rasio Biaya/Pendapatan)</td>
+                                <td class="px-6 py-4 text-center font-medium">1,03</td>
+                                <td class="px-6 py-4 text-center font-medium">1,01</td>
+                                <td class="px-6 py-4 text-center font-medium text-green-600">0,98</td>
+                                <td class="px-6 py-4 text-center font-medium text-green-600">0,95</td>
+                                <td class="px-6 py-4 text-center font-medium text-green-600">0,92</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- Charts Grid -->
+            <!-- Grid untuk Grafik -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="card-style p-6">
-                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Proyeksi Sambungan Baru & Cakupan Layanan</h3>
+                <!-- Grafik Pertumbuhan Pelanggan -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl transform hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Pertumbuhan Pelanggan</h3>
                     <div class="chart-container">
-                        <canvas id="sambunganCakupanChart"></canvas>
+                        <canvas id="customerGrowthChart"></canvas>
                     </div>
                 </div>
-                <div class="card-style p-6">
-                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Proyeksi Volume Produksi Air Minum (m³/hari)</h3>
+
+                <!-- Grafik Target Operasional -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl transform hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Target Operasional</h3>
                     <div class="chart-container">
-                        <canvas id="produksiChart"></canvas>
+                        <canvas id="operationalTargetsChart"></canvas>
                     </div>
                 </div>
-                <div class="card-style p-6">
-                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Target Penurunan NRW & Peningkatan IKM</h3>
+
+                <!-- Grafik Kualitas Layanan & SDM -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl transform hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Kualitas Layanan & Pengembangan SDM</h3>
                     <div class="chart-container">
-                        <canvas id="nrwIkmChart"></canvas>
+                        <canvas id="serviceQualityChart"></canvas>
                     </div>
                 </div>
-                <div class="card-style p-6">
-                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Proyeksi Efisiensi & Pelatihan SDM (Kumulatif)</h3>
+
+                <!-- Grafik Efisiensi Operasional -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl transform hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Efisiensi Operasional</h3>
                     <div class="chart-container">
-                        <canvas id="efisiensiSdmChart"></canvas>
+                        <canvas id="efficiencyChart"></canvas>
                     </div>
                 </div>
             </div>
         </main>
-        
-        <footer class="text-center mt-12 py-4 border-t border-gray-200">
-            <p class="text-sm text-gray-500">&copy; 2025 PERUMDA Air Minum Tirta Indragiri. Dasbor ini dibuat berdasarkan dokumen DRAFT RENBIS V.09.</p>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12">
+            <p class="text-sm text-gray-500">Visualisasi Data Berdasarkan Dokumen RENBIS PERUMDA Air Minum Tirta Indragiri 2025-2029</p>
         </footer>
     </div>
 
     <script>
-        // Data Store
-        const kpiData = [
-            { indicator: 'Sambungan Baru (Unit)', values: [5105, 4854, 5620, 7210, 9311], format: (val) => val.toLocaleString('id-ID') },
-            { indicator: 'Total Proyeksi SR', values: [17162, 22016, 27636, 34846, 44157], format: (val) => val.toLocaleString('id-ID') },
-            { indicator: 'Volume Produksi (m³/hari)', values: [7791, 9879, 12504, 16133, 21771], format: (val) => val.toLocaleString('id-ID') },
-            { indicator: 'Cakupan Layanan (%)', values: [9.4, 12.1, 15.2, 19.1, 24.2], format: (val) => `${val.toLocaleString('id-ID', {minimumFractionDigits: 1, maximumFractionDigits: 1})}%` },
-            { indicator: 'Tingkat Kehilangan Air (NRW)', values: [30.0, 27.5, 25.0, 22.5, 20.0], format: (val) => `${val.toLocaleString('id-ID', {minimumFractionDigits: 2, maximumFractionDigits: 2})}%` },
-            { indicator: 'Skor Kepuasan (IKM)', values: [90.2, 91.4, 92.6, 93.8, 95.0], format: (val) => val.toLocaleString('id-ID') },
-            { indicator: 'Penyelesaian Aduan', values: [48, 42, 36, 30, 24], format: (val) => `< ${val} Jam` },
-            { indicator: 'SDM Dilatih (Orang)', values: [25, 25, 25, 25, 25], format: (val) => val.toLocaleString('id-ID') },
-            { indicator: 'Efisiensi Operasional (Rp/m³)', values: [4532, 3628, 2968, 2418, 1960], format: (val) => `Rp ${val.toLocaleString('id-ID')}` }
-        ];
+        // Data Indikator dari PDF
+        const indicatorData = {
+            labels: ['2025', '2026', '2027', '2028', '2029'],
+            sambunganBaru: [1837, 1509, 1385, 1612, 1907],
+            totalProyeksi: [13894, 15403, 16788, 18400, 20307],
+            volumeProduksi: [6308, 7239, 8062, 8950, 9958],
+            cakupanLayanan: [8.0, 8.5, 9.0, 9.8, 10.5],
+            nrw: [30, 27.5, 25, 22.5, 20],
+            skorIKM: [89, 90, 91, 92, 93],
+            sdmDilatih: [20, 45, 75, 110, 150],
+            efisiensi: [1.03, 1.01, 0.98, 0.95, 0.92]
+        };
 
-        const years = ['2025', '2026', '2027', '2028', '2029'];
-        
-        function populateTable() {
-            const tableBody = document.getElementById('kpi-table-body');
-            kpiData.forEach((kpi, index) => {
-                const row = document.createElement('tr');
-                if (index % 2 === 1) {
-                    row.className = 'bg-gray-50';
-                }
-                
-                let rowHtml = `<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${kpi.indicator}</td>`;
-                kpi.values.forEach(value => {
-                    rowHtml += `<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 text-center">${kpi.format(value)}</td>`;
-                });
-                row.innerHTML = rowHtml;
-                tableBody.appendChild(row);
-            });
+        // Fungsi helper untuk membuat gradien
+        function createGradient(ctx, color1, color2) {
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, color1);
+            gradient.addColorStop(1, color2);
+            return gradient;
         }
 
-        // Chart Data
-        const dataSambunganBaru = kpiData.find(k => k.indicator === 'Sambungan Baru (Unit)').values;
-        const dataCakupan = kpiData.find(k => k.indicator === 'Cakupan Layanan (%)').values;
-        const dataProduksi = kpiData.find(k => k.indicator === 'Volume Produksi (m³/hari)').values;
-        const dataNrw = kpiData.find(k => k.indicator === 'Tingkat Kehilangan Air (NRW)').values;
-        const dataIkm = kpiData.find(k => k.indicator === 'Skor Kepuasan (IKM)').values;
-        const dataEfisiensi = kpiData.find(k => k.indicator === 'Efisiensi Operasional (Rp/m³)').values;
-        const dataSdm = [25, 50, 75, 100, 125]; // Cumulative
-
-        document.addEventListener('DOMContentLoaded', () => {
-            populateTable();
-        });
-
-        // Chart.js Global Config for Light Theme
-        Chart.defaults.color = '#6B7280';
-        Chart.defaults.borderColor = 'rgba(0, 0, 0, 0.05)';
-        Chart.defaults.font.family = "'Inter', 'sans-serif'";
-
+        // Konfigurasi Umum Chart
         const chartOptions = {
-            responsive: true,
             maintainAspectRatio: false,
-            interaction: { mode: 'index', intersect: false },
-            scales: {
-                x: { grid: { display: false }, ticks: { color: '#6B7280' } },
-                y: { grid: { color: 'rgba(0, 0, 0, 0.05)' }, ticks: { color: '#6B7280' } }
-            },
+            responsive: true,
             plugins: {
-                legend: { position: 'bottom', labels: { color: '#374151' } },
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        boxWidth: 15,
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
                 tooltip: {
-                    backgroundColor: '#ffffff',
-                    titleColor: '#111827',
-                    bodyColor: '#374151',
-                    titleFont: { size: 14, weight: 'bold' },
-                    bodyFont: { size: 12 },
+                    mode: 'index',
+                    intersect: false,
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleFont: { size: 16, weight: 'bold' },
+                    bodyFont: { size: 14 },
                     padding: 12,
-                    cornerRadius: 8,
-                    borderColor: 'rgba(0, 0, 0, 0.1)',
-                    borderWidth: 1,
-                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                    cornerRadius: 8
+                }
+            },
+            scales: {
+                x: {
+                    grid: { display: false },
+                    ticks: { font: { size: 12 } }
+                },
+                y: {
+                    grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                    ticks: { font: { size: 12 } }
                 }
             }
         };
 
-        // Chart 1: Sambungan & Cakupan
-        const ctx1 = document.getElementById('sambunganCakupanChart').getContext('2d');
-        const gradient1 = ctx1.createLinearGradient(0, 0, 0, 350);
-        gradient1.addColorStop(0, 'rgba(139, 92, 246, 0.2)');
-        gradient1.addColorStop(1, 'rgba(139, 92, 246, 0)');
+        // 1. Grafik Pertumbuhan Pelanggan
+        const ctx1 = document.getElementById('customerGrowthChart').getContext('2d');
         new Chart(ctx1, {
             type: 'bar',
             data: {
-                labels: years,
+                labels: indicatorData.labels,
                 datasets: [{
-                    label: 'Sambungan Baru (Unit)',
-                    data: dataSambunganBaru,
-                    backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                    label: 'Sambungan Baru (unit)',
+                    data: indicatorData.sambunganBaru,
+                    backgroundColor: createGradient(ctx1.canvas.getContext('2d'), 'rgba(59, 130, 246, 0.6)', 'rgba(59, 130, 246, 0.2)'),
                     borderColor: 'rgba(59, 130, 246, 1)',
-                    borderWidth: 2, borderRadius: 4, yAxisID: 'y'
+                    borderWidth: 2,
+                    borderRadius: 5,
+                    yAxisID: 'y',
                 }, {
-                    label: 'Cakupan Layanan (%)',
-                    data: dataCakupan,
+                    label: 'Total Proyeksi (kumulatif)',
+                    data: indicatorData.totalProyeksi,
                     type: 'line',
-                    borderColor: 'rgba(139, 92, 246, 1)',
-                    backgroundColor: gradient1,
-                    tension: 0.4, fill: true, yAxisID: 'y1',
+                    borderColor: 'rgba(239, 68, 68, 1)',
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    tension: 0.4,
+                    fill: true,
                     pointBackgroundColor: '#fff',
-                    pointBorderColor: 'rgba(139, 92, 246, 1)'
+                    pointBorderWidth: 2,
+                    yAxisID: 'y1',
                 }]
             },
-            options: { ...chartOptions, scales: { x: chartOptions.scales.x, y: { type: 'linear', display: true, position: 'left', title: { display: true, text: 'Jumlah Unit' } }, y1: { type: 'linear', display: true, position: 'right', title: { display: true, text: 'Persentase (%)' }, grid: { drawOnChartArea: false } } } }
+            options: { ...chartOptions, scales: {
+                y: { beginAtZero: true, position: 'left', title: { display: true, text: 'Unit Sambungan Baru' } },
+                y1: { beginAtZero: false, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'Total Sambungan (Kumulatif)' } }
+            }}
         });
 
-        // Chart 2: Produksi
-        const ctx2 = document.getElementById('produksiChart').getContext('2d');
-        const gradient2 = ctx2.createLinearGradient(0, 0, 0, 350);
-        gradient2.addColorStop(0, 'rgba(16, 185, 129, 0.3)');
-        gradient2.addColorStop(1, 'rgba(16, 185, 129, 0)');
+        // 2. Grafik Target Operasional
+        const ctx2 = document.getElementById('operationalTargetsChart').getContext('2d');
         new Chart(ctx2, {
             type: 'bar',
             data: {
-                labels: years,
+                labels: indicatorData.labels,
                 datasets: [{
                     label: 'Volume Produksi (m³/hari)',
-                    data: dataProduksi,
-                    backgroundColor: gradient2,
-                    borderColor: 'rgba(16, 185, 129, 1)',
-                    borderWidth: 2, borderRadius: 4
-                }]
-            },
-            options: chartOptions
-        });
-
-        // Chart 3: NRW & IKM
-        const ctx3 = document.getElementById('nrwIkmChart').getContext('2d');
-        const gradient3a = ctx3.createLinearGradient(0, 0, 0, 350);
-        gradient3a.addColorStop(0, 'rgba(220, 38, 38, 0.2)');
-        gradient3a.addColorStop(1, 'rgba(220, 38, 38, 0)');
-        const gradient3b = ctx3.createLinearGradient(0, 0, 0, 350);
-        gradient3b.addColorStop(0, 'rgba(217, 119, 6, 0.2)');
-        gradient3b.addColorStop(1, 'rgba(217, 119, 6, 0)');
-        new Chart(ctx3, {
-            type: 'line',
-            data: {
-                labels: years,
-                datasets: [{
-                    label: 'NRW (%)',
-                    data: dataNrw,
-                    borderColor: 'rgba(239, 68, 68, 1)',
-                    backgroundColor: gradient3a,
-                    yAxisID: 'y', tension: 0.4, fill: true
+                    data: indicatorData.volumeProduksi,
+                    backgroundColor: createGradient(ctx2.canvas.getContext('2d'), 'rgba(34, 197, 94, 0.6)', 'rgba(34, 197, 94, 0.2)'),
+                    borderColor: 'rgba(34, 197, 94, 1)',
+                    borderWidth: 2,
+                    borderRadius: 5,
+                    yAxisID: 'y',
                 }, {
-                    label: 'Skor IKM',
-                    data: dataIkm,
-                    borderColor: 'rgba(245, 158, 11, 1)',
-                    backgroundColor: gradient3b,
-                    yAxisID: 'y1', tension: 0.4, fill: true
+                    label: 'Target NRW (%)',
+                    data: indicatorData.nrw,
+                    type: 'line',
+                    borderColor: 'rgba(249, 115, 22, 1)',
+                    backgroundColor: 'rgba(249, 115, 22, 0.1)',
+                    tension: 0.4,
+                    fill: true,
+                    pointBackgroundColor: '#fff',
+                    pointBorderWidth: 2,
+                    yAxisID: 'y1',
                 }]
             },
-            options: { ...chartOptions, scales: { x: chartOptions.scales.x, y: { type: 'linear', display: true, position: 'left', title: { display: true, text: 'Persentase (%)' } }, y1: { type: 'linear', display: true, position: 'right', title: { display: true, text: 'Skor (0-100)' }, grid: { drawOnChartArea: false } } } }
+            options: { ...chartOptions, scales: {
+                y: { beginAtZero: true, position: 'left', title: { display: true, text: 'm³/hari' } },
+                y1: { beginAtZero: false, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'Persentase NRW (%)' } }
+            }}
         });
 
-        // Chart 4: Efisiensi & SDM
-        const ctx4 = document.getElementById('efisiensiSdmChart').getContext('2d');
-        new Chart(ctx4, {
+        // 3. Grafik Kualitas Layanan & SDM
+        const ctx3 = document.getElementById('serviceQualityChart').getContext('2d');
+        new Chart(ctx3, {
             type: 'bar',
             data: {
-                labels: years,
+                labels: indicatorData.labels,
                 datasets: [{
-                    label: 'Biaya per m³ Terjual (Rp)',
-                    data: dataEfisiensi,
-                    backgroundColor: 'rgba(37, 99, 235, 0.8)',
-                    borderColor: 'rgba(37, 99, 235, 1)',
-                    borderWidth: 2, borderRadius: 4, yAxisID: 'y'
+                    label: 'SDM Dilatih (kumulatif)',
+                    data: indicatorData.sdmDilatih,
+                    backgroundColor: createGradient(ctx3.canvas.getContext('2d'), 'rgba(168, 85, 247, 0.6)', 'rgba(168, 85, 247, 0.2)'),
+                    borderColor: 'rgba(168, 85, 247, 1)',
+                    borderWidth: 2,
+                    borderRadius: 5,
+                    yAxisID: 'y',
                 }, {
-                    label: 'SDM Dilatih (Kumulatif)',
-                    data: dataSdm,
+                    label: 'Skor Kepuasan (IKM)',
+                    data: indicatorData.skorIKM,
                     type: 'line',
-                    borderColor: 'rgba(20, 184, 166, 1)',
-                    backgroundColor: 'rgba(20, 184, 166, 0.1)',
-                    yAxisID: 'y1', tension: 0.4, fill: false,
+                    borderColor: 'rgba(234, 179, 8, 1)',
+                    backgroundColor: 'rgba(234, 179, 8, 0.1)',
+                    tension: 0.4,
+                    fill: true,
                     pointBackgroundColor: '#fff',
-                    pointBorderColor: 'rgba(20, 184, 166, 1)'
+                    pointBorderWidth: 2,
+                    yAxisID: 'y1',
                 }]
             },
-            options: { ...chartOptions, scales: { x: chartOptions.scales.x, y: { type: 'linear', display: true, position: 'left', title: { display: true, text: 'Rupiah per m³' } }, y1: { type: 'linear', display: true, position: 'right', title: { display: true, text: 'Jumlah Orang' }, grid: { drawOnChartArea: false } } } }
+            options: { ...chartOptions, scales: {
+                y: { beginAtZero: true, position: 'left', title: { display: true, text: 'Jumlah Orang' } },
+                y1: { min: 85, max: 95, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'Skor IKM (0-100)' } }
+            }}
+        });
+
+        // 4. Grafik Efisiensi Operasional
+        const ctx4 = document.getElementById('efficiencyChart').getContext('2d');
+        new Chart(ctx4, {
+            type: 'line',
+            data: {
+                labels: indicatorData.labels,
+                datasets: [{
+                    label: 'Rasio Efisiensi (Biaya/Pendapatan)',
+                    data: indicatorData.efisiensi,
+                    borderColor: 'rgba(219, 39, 119, 1)',
+                    backgroundColor: createGradient(ctx4.canvas.getContext('2d'), 'rgba(219, 39, 119, 0.4)', 'rgba(219, 39, 119, 0.05)'),
+                    tension: 0.4,
+                    fill: true,
+                    pointBackgroundColor: '#fff',
+                    pointBorderWidth: 2,
+                }]
+            },
+            options: { ...chartOptions, scales: {
+                y: { beginAtZero: false, title: { display: true, text: 'Rasio' } }
+            }}
         });
     </script>
 
